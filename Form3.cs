@@ -25,6 +25,15 @@ namespace Login
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+            Form1 form = new Form1();
+            form.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form4 form = new Form4();
+            form.ShowDialog();
         }
     }
 }

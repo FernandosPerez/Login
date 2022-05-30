@@ -56,7 +56,8 @@ namespace Login
 
             if (textBox2.Text == "gato")
             {
-                
+                this.Hide();
+
                 Form3 form = new Form3();
                 form.Enabled = true;
                 form.Show();
@@ -71,7 +72,18 @@ namespace Login
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            var resultado = MessageBox.Show("Deseas salir?", "salir", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+
+            if (resultado == DialogResult.Yes)
+            {
+                var confirmacion = MessageBox.Show("Seguro?", "Confirmación", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation);
+
+                if (confirmacion == DialogResult.Yes)
+                {
+                    this.Close();
+                }
+               
+            }
         }
     }
 }
