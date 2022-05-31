@@ -27,7 +27,7 @@ namespace Login
 
                 if (confirmacion == DialogResult.Yes)
                 {
-                    this.Close();
+                    Application.Exit();
                 }
 
             }

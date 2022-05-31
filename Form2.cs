@@ -41,7 +41,7 @@ namespace Login
 
                 if (textBox1.Text=="5576945365")
                 {
-                    this.Close();
+                    this.Hide();
                     Form1.intentos = 0;
                     MessageBox.Show("Vuelvo y reitero ;)");
                     Form1 form = new Form1();
@@ -57,7 +57,7 @@ namespace Login
                         button3.Enabled = false;
                         textBox1.Enabled = false;
                         MessageBox.Show("Se te dijo y se te advirtio !!!");
-                        this.Close();
+                        Application.Exit();
                     }
                 }
 
@@ -71,6 +71,11 @@ namespace Login
                 button3.Enabled = true;
                 button3.Visible = true;
             }
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

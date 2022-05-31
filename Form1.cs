@@ -31,7 +31,7 @@ namespace Login
         {
 
 
-            if (intentos > 3)
+            if (intentos == 4)
             {
                 this.Hide();
                 Form2 form = new Form2();
@@ -80,7 +80,7 @@ namespace Login
 
                 if (confirmacion == DialogResult.Yes)
                 {
-                    this.Close();
+                   Application.Exit();
                 }
                
             }
