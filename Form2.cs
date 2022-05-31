@@ -20,12 +20,16 @@ namespace Login
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            Form1 form = new Form1();
+            form.Show();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             textBox1.Enabled = true;
+            textBox1.Visible = true;
 
         }
 
@@ -39,7 +43,12 @@ namespace Login
                 {
                     this.Close();
                     Form1.intentos = 0;
-                }else if (textBox1.Text!= "5576945365")
+                    MessageBox.Show("Vuelvo y reitero ;)");
+                    Form1 form = new Form1();
+                    form.Show();
+
+                }
+                else if (textBox1.Text!= "5576945365")
                 {
                     falla = falla -1;
                     MessageBox.Show("El numero no corresponde tienes "+falla+ " intentos");
@@ -48,6 +57,7 @@ namespace Login
                         button3.Enabled = false;
                         textBox1.Enabled = false;
                         MessageBox.Show("Se te dijo y se te advirtio !!!");
+                        this.Close();
                     }
                 }
 
@@ -59,6 +69,7 @@ namespace Login
             if (textBox1.Enabled == true)
             {
                 button3.Enabled = true;
+                button3.Visible = true;
             }
         }
     }

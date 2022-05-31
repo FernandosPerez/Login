@@ -19,7 +19,18 @@ namespace Login
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            var resultado = MessageBox.Show("Deseas salir?", "salir", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+
+            if (resultado == DialogResult.Yes)
+            {
+                var confirmacion = MessageBox.Show("Seguro?", "Confirmación", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation);
+
+                if (confirmacion == DialogResult.Yes)
+                {
+                    this.Close();
+                }
+
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -33,6 +44,13 @@ namespace Login
         {
             this.Close();
             Form4 form = new Form4();
+            form.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form5 form = new Form5();
             form.ShowDialog();
         }
     }
